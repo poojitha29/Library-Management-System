@@ -84,7 +84,7 @@ public String consumer() throws JMSException, InterruptedException
 	
 	int port = 61613;
 	
-	System.out.println("=====================CONSUMER===================");
+	System.out.println("********CONSUMER*********");
 	
 	String queue = "/queue/84340.book.orders";
 	
@@ -110,13 +110,13 @@ public String consumer() throws JMSException, InterruptedException
 	
 	while(true) {
 	
-		System.out.println("Check 1");
+		System.out.println("--> Test 1");
 	    
 		Message msg = consumer.receive(5000);
 	    
 		if(msg==null){
 	    
-			System.out.println("Check 2");
+			System.out.println("--> Test 2");
 	    	
 			break;
 	    }
@@ -220,7 +220,7 @@ public void Publisher(ArrayList<String> arrivedBooks) throws JMSException{
 	
 	String host = "54.215.210.214";
 	
-	System.out.println("PUBLISHER");
+	System.out.println("***********PUBLISHER*********");
 	
 	int port = 61613;
 	
@@ -256,13 +256,13 @@ public void Publisher(ArrayList<String> arrivedBooks) throws JMSException{
 		
 		msg.setLongProperty("id", System.currentTimeMillis());
 		
-		System.out.println("message sent to library_a");
+		System.out.println("message had been sent to library_a");
 		
 		producer_a.send(msg);		
 		
 		if (data.split(":")[2].equals("\"computer\"")) {
 			
-			System.out.println("message sent to library_b");
+			System.out.println("message has been sent to library_b");
 			
 			producer_b.send(msg);
 		
