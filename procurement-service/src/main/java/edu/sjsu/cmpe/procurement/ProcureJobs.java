@@ -80,7 +80,7 @@ public String consumer() throws JMSException, InterruptedException
 	
 	String password = "password";
 	
-	String host = "54.215.210.214";
+	String host = "54.219.156.168";
 	
 	int port = 61613;
 	
@@ -155,7 +155,7 @@ public void HttpPOST(String lostBooks){
 	
 	String msg = "{\"id\" : \"84340\",\"order_book_isbns\":"+lostBooks+"}";
 	
-	WebResource webResource = client.resource("http://54.215.210.214:9000/orders");
+	WebResource webResource = client.resource("http://54.219.156.168:9000/orders");
 	
 	ClientResponse response = webResource.type("application/json").post(ClientResponse.class, msg);
 	
@@ -176,7 +176,7 @@ public ArrayList<String> HttpGET() throws JSONException {
 	
 	Client client = Client.create();
 	
-	WebResource webResource = client.resource("http://54.215.210.214:9000/orders/84340");
+	WebResource webResource = client.resource("http://54.219.156.168:9000/orders/84340");
 	
 	ClientResponse response = webResource.accept("application/json").get(ClientResponse.class);
 	
@@ -218,7 +218,7 @@ public void Publisher(ArrayList<String> arrivedBooks) throws JMSException{
 	
 	String password = "password";
 	
-	String host = "54.215.210.214";
+	String host = "54.219.156.168";
 	
 	System.out.println("***********PUBLISHER*********");
 	
