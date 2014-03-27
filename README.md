@@ -1,4 +1,4 @@
-cmpe273-assignment2
+Library Management System
 ===================
 PURPOSE:
 The primary goal of this assignment is to understand all key aspects of messaging paradigm and how to use messaging in the application integration. In addition, you will be learned how to call a REST API from an offline scheduler process.
